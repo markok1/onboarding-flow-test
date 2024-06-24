@@ -1,0 +1,326 @@
+.highlight-search {
+    background-color: #0094ff;
+    color: #fff
+}
+
+.mobile-close_track {
+    display: none
+}
+
+.autoComplete {
+    display: inline-block;
+    width: 100%;
+    position: relative
+}
+
+.autoComplete-track {
+    display: none !important;
+    left: 0;
+    right: 0;
+    top: calc(100% - 10px);
+    position: absolute;
+    height: 400px;
+    max-height: 250px;
+    overflow: hidden;
+    z-index: 999999;
+    box-shadow: 0 2px 6px #00000014;
+    border-radius: 5px;
+    border-top: 1px solid #e4e6e7;
+    border-bottom: 1px solid #e4e6e7;
+    border-left: 1px solid #e4e6e7;
+    border-right: 1px solid #e4e6e7
+}
+
+.autoComplete-track.autoComplete-track-position--top {
+    top: auto;
+    bottom: calc(100% - 5px)
+}
+
+.autoComplete-track.autoComplete--show {
+    display: block !important
+}
+
+.autoComplete-list {
+    display: block;
+    height: 100%;
+    min-height: 100%;
+    max-height: 100%;
+    list-style: none;
+    padding: unset;
+    margin: 0 auto;
+    text-align: left;
+    max-width: 100%;
+    background: #fff;
+    overflow: hidden;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+    overflow-y: scroll;
+    scroll-behavior: smooth
+}
+
+.autoComplete-list::-webkit-scrollbar {
+    display: none
+}
+
+.autoComplete-list_item {
+    text-align: left;
+    border-top: unset
+}
+
+.autoComplete-list .autoComplete-list_item:first-child {
+    border-top: unset
+}
+
+.autoComplete-list_item_button {
+    display: block;
+    width: 100%;
+    cursor: pointer;
+    border: unset;
+    background: unset;
+    text-align: left;
+    padding: 15px 10px 15px 20px;
+    font-size: 16px;
+    transition: .3s;
+    border-bottom: 1px solid rgba(0, 0, 0, 0);
+    border-radius: 6px
+}
+
+.autoComplete-list_item_button:hover {
+    background: #f9fafa
+}
+
+.autoComplete-list_item input[type=radio] {
+    height: 0;
+    width: 0;
+    display: none;
+    position: absolute
+}
+
+.autoComplete-list_item input[type=radio]:checked+label.autoComplete-list_item_button {
+    background-color: #0094ff29;
+    color: #0094ff
+}
+
+@media screen and (max-width: 600px) {
+    .autoComplete {
+        position: unset
+    }
+
+    .mobile-close_track {
+        display: flex;
+        background: unset;
+        border: unset;
+        font-size: 14px;
+        color: #000000b3;
+        text-align: right;
+        margin-left: auto;
+        margin-right: 0;
+        padding-right: 15px;
+        z-index: 99;
+        height: 20px;
+        background: rgb(242, 244, 245);
+        width: 100%;
+        align-items: center;
+        justify-content: end;
+        -webkit-tap-highlight-color: rgba(0, 0, 0, 0)
+    }
+
+    .autoComplete-track {
+        position: fixed;
+        left: 0 !important;
+        right: 0 !important;
+        height: 275px !important;
+        max-height: 100%;
+        bottom: -5px !important;
+        top: auto;
+        margin: 0;
+        width: auto;
+        max-width: 100%;
+        padding: 0;
+        border-radius: 0;
+        box-shadow: 0 10px 5px #e4e6e7, 0 -5px 20px #e4e6e7
+    }
+
+    .autoComplete-track:before {
+        content: "";
+        position: absolute;
+        top: 20px;
+        width: 100%;
+        right: 0;
+        left: 0;
+        height: 60px;
+        background: rgb(242, 244, 245);
+        background: linear-gradient(180deg, rgba(242, 244, 245, 1) 10%, rgba(255, 255, 255, 0) 100%);
+        pointer-events: none
+    }
+
+    .autoComplete-track:after {
+        content: "";
+        position: absolute;
+        bottom: 0;
+        width: 100%;
+        right: 0;
+        left: 0;
+        height: 60px;
+        background: rgb(242, 244, 245);
+        background: linear-gradient(0deg, rgba(242, 244, 245, 1) 10%, rgba(255, 255, 255, 0) 100%);
+        pointer-events: none
+    }
+
+    .autoComplete-list {
+        height: 100% !important;
+        max-height: auto !important;
+        background: #f2f4f5;
+        padding-top: 25px
+    }
+
+    .autoComplete-list>:last-child {
+        margin-bottom: 180px
+    }
+
+    .autoComplete-list_item_button {
+        text-align: center;
+        font-size: 18px;
+        font-weight: 500;
+        margin: 0;
+        padding: 20px 0;
+        background-color: #f2f4f5;
+        border-bottom: 1px solid #e4e6e7
+    }
+
+    .autoComplete-list .autoComplete-list_item:last-child .autoComplete-list_item_button {
+        border-bottom: none
+    }
+}
+
+.overflow-wrapper {
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box
+}
+
+.wrapper {
+    display: block
+}
+
+.radio-box {
+    position: relative;
+    width: 20px;
+    height: 20px;
+    border-radius: 100%;
+    background: #ffffff;
+    border: 1px solid #d9dbdd;
+    margin-right: 12px;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    -ms-touch-action: none;
+    touch-action: none
+}
+
+.input-checkbox_input:checked+label .radio-box,
+.input-checkbox_input:checked+label .check-box {
+    background: #e6f4ff;
+    border: 1px solid #0594fa
+}
+
+.input-checkbox_input:checked+label .radio-box:after {
+    content: "";
+    position: absolute;
+    height: 8px;
+    width: 8px;
+    background-color: #0594fa;
+    border-radius: 100%
+}
+
+.check-box {
+    position: relative;
+    width: 20px;
+    height: 20px;
+    border-radius: 6px;
+    background: #ffffff;
+    border: 1px solid #d9dbdd;
+    margin-right: 12px;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0
+}
+
+.input-checkbox_input:checked+label .check-box:after {
+    content: "";
+    background: url(../../../CheckMark.svg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    position: absolute;
+    height: 14px;
+    width: 14px
+}
+
+.input-checkbox_label {
+    display: flex;
+    align-items: center;
+    background: #ffffff;
+    border: 1px solid #d9dbdd;
+    box-shadow: 0 1px 2px #1018280d;
+    border-radius: 8px;
+    height: 52px;
+    padding: 0 14px;
+    transition: 75ms;
+    cursor: pointer;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 20px;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    margin: 0 0 12px;
+    font-weight: 500;
+    transition: .3s;
+    transform-origin: center center
+}
+
+.input-checkbox_label:active {
+    transform: scale(.99)
+}
+
+.input-checkbox_label div {
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 24px;
+    color: #2d3239
+}
+
+.input-checkbox_label span {
+    margin-right: 9.5px
+}
+
+.input-checkbox_label img {
+    filter: saturate(0)
+}
+
+.input-checkbox_input {
+    display: none
+}
+
+.input-checkbox_label:hover {
+    border-color: #0000000d
+}
+
+.input-checkbox_input:checked+.input-checkbox_label {
+    border-color: #0094ff;
+    color: #0094ff;
+    background: #f5fbff;
+    box-shadow: 0 2px 6px #0094ff29
+}
+
+.input-checkbox_input:checked+.input-checkbox_label img {
+    filter: saturate(1)
+}

@@ -1,0 +1,6 @@
+.pageTransition {
+    position: relative;
+    z-index: 4;
+    box-sizing: border-box;
+    height: 100%
+}

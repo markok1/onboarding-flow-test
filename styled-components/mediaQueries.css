@@ -1,0 +1,25 @@
+.main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    row-gap: 102px;
+    padding: 30px 15px
+}
+
+@media screen and (min-width: 768px) {
+    .main-xeky4h {
+        padding: 30px 72px;
+        row-gap: 214px
+    }
+
+    .logo svg {
+        width: 128px;
+        height: 38px
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    .main {
+        row-gap: 192px
+    }
+}
